@@ -1,0 +1,24 @@
+{#
+/**
+ * @file
+ * Section heading block.
+ *
+ * Available variables:
+ * - uswds_section_heading_heading: headline text.
+ * - uswds_section_heading_body: body content.
+ * - uswds_section_heading_cta_url: button link path.
+ * - uswds_section_heading_cta_title: button link text.
+ *
+ * @ingroup themeable
+ */
+#}
+
+<div class="section-heading">
+  <h2 class="font-heading-xl margin-y-0">{{ uswds_section_heading_title }}</h2>
+  {{ uswds_section_heading_body }}
+  {% if uswds_section_heading_cta_url and uswds_section_heading_cta_title %}
+  <a class="usa-button usa-button--big" href="{{ uswds_section_heading_cta_url }}">
+    {{ uswds_section_heading_cta_title }}
+  </a>
+  {% endif %}
+</div>

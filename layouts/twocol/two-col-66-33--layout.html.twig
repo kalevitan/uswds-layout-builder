@@ -1,0 +1,48 @@
+{#
+/**
+ * @file
+ * Theme implementation to display a two-column layout.
+ *
+ * Available variables:
+ * - content: The content for this layout.
+ * - attributes: HTML attributes for the layout <div>.
+ *
+ * @ingroup themeable
+ */
+#}
+{%
+  set classes = [
+    'layout',
+    'layout--twocol-66-33',
+  ]
+%}
+{%
+  set responsive_classes = [
+    'margin-bottom-4',
+    'tablet:margin-bottom-0',
+  ]
+%}
+
+{% if content %}
+  <section{{ attributes.addClass(classes) }}>
+
+    {% if settings.section_title %}
+      <h3>{{ settings.section_title }}</h3>
+    {% endif %}
+
+    <div class="grid-row grid-gap-lg">
+      {% if content.left %}
+        <div {{ region_attributes.left.addClass('layout__region', 'layout__region--content', 'tablet:grid-col-8', responsive_classes) }}>
+          {{ content.left }}
+        </div>
+      {% endif %}
+
+      {% if content.right %}
+        <div {{ region_attributes.right.addClass('layout__region', 'layout__region--content', 'tablet:grid-col-4') }}>
+          {{ content.right }}
+        </div>
+      {% endif %}
+    </div>
+
+  </section>
+{% endif %}

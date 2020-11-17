@@ -1,0 +1,69 @@
+one_col_100__layout:
+  label: 'One Column (USWDS)'
+  category: 'Columns: 1'
+  path: layouts/onecol
+  template: one-col-100--layout
+  class: '\Drupal\uswds_layout_builder\Plugin\Layout\UswdsLayout'
+  regions:
+    main:
+      label: Main
+  icon_map:
+    - [main]
+
+two_col_50_50__layout:
+  label: 'Two Column 50/50 (USWDS)'
+  category: 'Columns: 2'
+  path: layouts/twocol
+  template: two-col-50-50--layout
+  class: '\Drupal\uswds_layout_builder\Plugin\Layout\UswdsLayout'
+  regions:
+    left:
+      label: Left
+    right:
+      label: Right
+  icon_map:
+    - [left,right]
+
+two_col_66_33__layout:
+  label: 'Two Column 66/33 (USWDS)'
+  category: 'Columns: 2'
+  path: layouts/twocol
+  template: two-col-66-33--layout
+  class: '\Drupal\uswds_layout_builder\Plugin\Layout\UswdsLayout'
+  regions:
+    left:
+      label: Left
+    right:
+      label: Right
+  icon_map:
+    - [left,left,right]
+
+two_col_33_66__layout:
+  label: 'Two Column 33/66 (USWDS)'
+  category: 'Columns: 2'
+  path: layouts/twocol
+  template: two-col-33-66--layout
+  class: '\Drupal\uswds_layout_builder\Plugin\Layout\UswdsLayout'
+  regions:
+    left:
+      label: Left
+    right:
+      label: Right
+  icon_map:
+    - [left,right,right]
+
+three_col__layout:
+  label: 'Three column (USWDS)'
+  category: 'Columns: 3'
+  path: layouts/threecol
+  template: three-col--layout
+  class: '\Drupal\uswds_layout_builder\Plugin\Layout\UswdsLayout'
+  regions:
+    left:
+      label: 'Left'
+    middle:
+      label: 'Middle'
+    right:
+      label: 'Right'
+  icon_map:
+    - [left, middle, right]

@@ -1,0 +1,38 @@
+{#
+/**
+ * @file
+ * Media block.
+ *
+ * Available variables:
+ * - variant: light or dark background color.
+ * - media: array of media blocks.
+ *   - uswds_media_image: image.
+ *   - uswds_media_heading: headline text.
+ *   - uswds_media_body: body content.
+ *
+ * @ingroup themeable
+ */
+#}
+<div class="usa-graphic-list usa-section usa-section--{{ variant }}">
+  <div class="grid-container">
+    {% for row in media|batch(2) %}
+      <div class="usa-graphic-list__row grid-row grid-gap">
+        {% for column in row %}
+          <div class="usa-media-block tablet:grid-col">
+            <div class="grid-row tablet:grid-gap-md desktop:grid-gap-sm">
+              {%  if column.uswds_media_image %}
+                <div class="usa-media-block__img-wrapper margin-bottom-3 mobile:grid-col-12 tablet:grid-col-{{ row|length == 2 ? '4' : '2' }}">
+                  <img class="usa-media-block__img" src="{{ file_url(column.uswds_media_image['#uri']) }}" alt="{{ column.uswds_media_heading }}">
+                </div>
+              {% endif %}
+              <div class="usa-media-block__body mobile:grid-col-12 tablet:grid-col">
+                <h3 class="usa-graphic-list__heading">{{ column.uswds_media_heading }}</h3>
+                {{ column.uswds_media_body }}
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    {% endfor %}
+  </div>
+</div>

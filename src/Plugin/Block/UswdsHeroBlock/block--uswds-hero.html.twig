@@ -1,0 +1,24 @@
+{#
+/**
+ * @file
+ * Hero block.
+ *
+ * Available variables:
+ * - uswds_hero_heading: headline text.
+ * - uswds_hero_body: body content.
+ * - uswds_hero_cta_url: button link path.
+ * - uswds_hero_cta_title: button link text.
+ *
+ * @ingroup themeable
+ */
+#}
+
+<div class="usa-hero" style="background-image: url('{{ file_url(uswds_hero_image['#uri']) }}')">
+  <div class="grid-container">
+    <div class="usa-hero__callout">
+      <h1 class="usa-hero__heading">{{ uswds_hero_heading }}</h1>
+      <p>{{ uswds_hero_body }}</p>
+      <a class="usa-button" href="{{ uswds_hero_cta_url }}">{{ uswds_hero_cta_title }}</a>
+    </div>
+  </div>
+</div>

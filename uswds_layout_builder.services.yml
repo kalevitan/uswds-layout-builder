@@ -1,0 +1,21 @@
+services:
+  uswds_layout_builder.event_subscriber_uswds_accordion:
+    class: Drupal\uswds_layout_builder\Plugin\Block\UswdsAccordionBlock\UswdsAccordionEventSubscriber
+    tags:
+      - { name: 'event_subscriber' }
+  uswds_layout_builder.event_subscriber_uswds_hero:
+    class: Drupal\uswds_layout_builder\Plugin\Block\UswdsHeroBlock\UswdsHeroEventSubscriber
+    tags:
+      - { name: 'event_subscriber' }
+  uswds_layout_builder.event_subscriber_uswds_media:
+    class: Drupal\uswds_layout_builder\Plugin\Block\UswdsMediaBlock\UswdsMediaEventSubscriber
+    tags:
+      - { name: 'event_subscriber' }
+  uswds_layout_builder.event_subscriber_uswds_section_heading:
+    class: Drupal\uswds_layout_builder\Plugin\Block\UswdsSectionHeadingBlock\UswdsSectionHeadingEventSubscriber
+    tags:
+      - { name: 'event_subscriber' }
+  uswds_layout_builder.event_subscriber_uswds_tagline:
+    class: Drupal\uswds_layout_builder\Plugin\Block\UswdsTaglineBlock\UswdsTaglineEventSubscriber
+    tags:
+      - { name: 'event_subscriber' }

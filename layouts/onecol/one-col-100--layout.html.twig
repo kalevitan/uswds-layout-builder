@@ -1,0 +1,34 @@
+{#
+/**
+ * @file
+ * Theme implementation to display a one-column layout.
+ *
+ * Available variables:
+ * - content: The content for this layout.
+ * - attributes: HTML attributes for the layout <div>.
+ *
+ * @ingroup themeable
+ */
+#}
+{%
+  set classes = [
+    'layout',
+    'layout--onecol',
+  ]
+%}
+
+{% if content %}
+<section{{ attributes.addClass(classes) }}>
+
+  {% if settings.section_title %}
+    <h3>{{ settings.section_title }}</h3>
+  {% endif %}
+
+  <div class="grid-row">
+    <div{{ region_attributes.main.addClass('layout__region', 'layout__region--content', 'grid-col-12') }}>
+      {{ content.main }}
+    </div>
+  </div>
+
+</section>
+{% endif %}

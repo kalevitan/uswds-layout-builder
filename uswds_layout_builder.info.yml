@@ -1,0 +1,10 @@
+name: USWDS Layout Builder block kit
+type: module
+description: Provides several block types based on U.S. Web Design System.
+core: 8.x
+package: USWDS
+dependencies:
+  - drupal:block
+  - drupal:layout_builder
+  - drupal:layout_discovery
+  - drupal:hook_event_dispatcher

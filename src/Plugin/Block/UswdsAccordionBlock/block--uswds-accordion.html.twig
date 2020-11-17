@@ -1,0 +1,29 @@
+{#
+/**
+ * @file
+ * Accordion block.
+ *
+ * Available variables:
+ * - uswds_accordion_heading: headline text.
+ * - uswds_accordion_body: body content.
+ * - uswds_accordion_expanded: show accordion body content by default.
+ *
+ * @ingroup themeable
+ */
+#}
+
+{% set accordion_machine_name = uswds_accordion_heading|lower|replace({' ':'_'}) %}
+{% set expanded = uswds_accordion_expanded %}
+
+<div class="usa-accordion" style="margin-bottom:10px; margin-top:10px">
+  <h2 class="usa-accordion__heading">
+    <button class="usa-accordion__button"
+            aria-controls="{{ accordion_machine_name }}"
+            aria-expanded="{{ expanded ? 'true' : 'false' }}">
+      {{ uswds_accordion_heading }}
+    </button>
+  </h2>
+  <div id="{{ accordion_machine_name }}" class="usa-accordion__content usa-prose">
+    {{ uswds_accordion_body }}
+  </div>
+</div>
